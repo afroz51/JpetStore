@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [CartStoreSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Chrome_Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://petstore.octoperf.com/actions/Catalog.action"/>
+    <classes>
+      <class name="tests.RemoveCartTest">
+        <methods>
+          <include name="testRemoveProducts"/>
+          <include name="generateAllureReport"/>
+          <include name="setUp"/>
+          <include name="close"/>
+          <include name="clearAllureResults"/>
+        </methods>
+      </class> <!-- tests.RemoveCartTest -->
+    </classes>
+  </test> <!-- Chrome_Test(failed) -->
+</suite> <!-- Failed suite [CartStoreSuite] -->

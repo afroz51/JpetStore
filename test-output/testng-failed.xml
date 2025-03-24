@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Checkout Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Checkout Test - Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://petstore.octoperf.com/actions/Catalog.action"/>
+    <classes>
+      <class name="tests.CheckoutTestValid">
+        <methods>
+          <include name="testCheckout_ValidData"/>
+          <include name="generateAllureReport"/>
+          <include name="close"/>
+          <include name="setUp"/>
+          <include name="clearAllureResults"/>
+        </methods>
+      </class> <!-- tests.CheckoutTestValid -->
+    </classes>
+  </test> <!-- Checkout Test - Chrome(failed) -->
+</suite> <!-- Failed suite [Checkout Suite] -->

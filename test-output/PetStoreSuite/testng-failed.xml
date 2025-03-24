@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [PetStoreSuite]">
+  <test thread-count="2" parallel="tests" name="Edge_Test(failed)">
+    <parameter name="browser" value="edge"/>
+    <parameter name="url" value="https://petstore.octoperf.com/actions/Catalog.action"/>
+    <classes>
+      <class name="tests.CartTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="close"/>
+          <include name="testAddMultipleProductsToCart_ExcelData" invocation-numbers="0"/>
+          <include name="testAddMultipleProductsToCart_PropertiesFile" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- tests.CartTest -->
+    </classes>
+  </test> <!-- Edge_Test(failed) -->
+</suite> <!-- Failed suite [PetStoreSuite] -->

@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" > 
+<suite name="master" parallel="tests" thread-count="2">
+    
+    <!-- Include Automation Suite -->
+    <suite-files>
+        <!-- <suite-file path="login.xml"/>  -->
+        <suite-file path="pet.xml"/>
+        <suite-file path="cart.xml"/>
+        <suite-file path="removecart.xml"/>
+        <suite-file path="checkoutInvalid.xml"/>
+        <suite-file path="checkoutvalid.xml"/>
+        <suite-file path="logout.xml"/>
+    </suite-files>
+
+</suite>

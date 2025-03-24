@@ -1,0 +1,211 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=2236, tid=13364
+#
+# JRE version:  (17.0.12+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (17.0.12+8-LTS-286, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Dallure.results.directory=C:\Users\AFROZ\git\capstone\JpetStore/target/allure-results -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages org.testng.remote.RemoteTestNG -serport 7858 -protocol json -d C:\Users\AFROZ\git\capstone\JpetStore\test-output C:\Users\AFROZ\git\capstone\JpetStore\xml\cart.xml
+
+Host: AMD Ryzen 3 3200U with Radeon Vega Mobile Gfx  , 4 cores, 3G,  Windows 11 , 64 bit Build 26100 (10.0.26100.3323)
+Time: Sat Mar 22 21:01:54 2025 India Standard Time elapsed time: 0.277727 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000028b4ef20ce0):  JavaThread "Unknown thread" [_thread_in_vm, id=13364, stack(0x000000a2ccb00000,0x000000a2ccc00000)]
+
+Stack: [0x000000a2ccb00000,0x000000a2ccc00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67a04a]
+V  [jvm.dll+0x7da4ed]
+V  [jvm.dll+0x7dbe33]
+V  [jvm.dll+0x7dc4a3]
+V  [jvm.dll+0x24508f]
+V  [jvm.dll+0xa5e2b]
+V  [jvm.dll+0x2e22de]
+V  [jvm.dll+0x2d9fbb]
+V  [jvm.dll+0x7aca21]
+V  [jvm.dll+0x367591]
+V  [jvm.dll+0x78b999]
+V  [jvm.dll+0x3ec83f]
+V  [jvm.dll+0x3ee471]
+C  [jli.dll+0x5297]
+C  [ucrtbase.dll+0x37b0]
+C  [KERNEL32.DLL+0x2e8d7]
+C  [ntdll.dll+0xbbf6c]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffa59ef7a18, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000028b4ef58d00 GCTaskThread "GC Thread#0" [stack: 0x000000a2ccc00000,0x000000a2ccd00000] [id=12884]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa597270e0]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000028b4ef1c150] Heap_lock - owner thread: 0x0000028b4ef20ce0
+
+Heap address: 0x00000000c9400000, size: 876 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x00000000c9400000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa59b13859]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.102 Loaded shared library C:\Program Files\Java\jdk-17\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff6b9120000 - 0x00007ff6b9130000 	C:\Program Files\Java\jdk-17\bin\javaw.exe
+0x00007ffa7eba0000 - 0x00007ffa7ee03000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa7d450000 - 0x00007ffa7d517000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa7be80000 - 0x00007ffa7c249000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa7c5b0000 - 0x00007ffa7c6fc000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffa5a3c0000 - 0x00007ffa5a3d9000 	C:\Program Files\Java\jdk-17\bin\jli.dll
+0x00007ffa7e8d0000 - 0x00007ffa7e982000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa7d5a0000 - 0x00007ffa7d649000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa7da00000 - 0x00007ffa7daa6000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa7d8d0000 - 0x00007ffa7d9e6000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffa7c9c0000 - 0x00007ffa7cb8a000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa7be50000 - 0x00007ffa7be77000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa7cbe0000 - 0x00007ffa7cc0a000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffa7c2f0000 - 0x00007ffa7c421000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa7bda0000 - 0x00007ffa7be43000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa5a3a0000 - 0x00007ffa5a3bb000 	C:\Program Files\Java\jdk-17\bin\VCRUNTIME140.dll
+0x00007ffa66a20000 - 0x00007ffa66cb0000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.3323_none_3e088096e3344490\COMCTL32.dll
+0x00007ffa746f0000 - 0x00007ffa746fb000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa7cba0000 - 0x00007ffa7cbcf000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffa5a330000 - 0x00007ffa5a33c000 	C:\Program Files\Java\jdk-17\bin\vcruntime140_1.dll
+0x00007ffa5a2a0000 - 0x00007ffa5a32e000 	C:\Program Files\Java\jdk-17\bin\msvcp140.dll
+0x00007ffa59440000 - 0x00007ffa5a020000 	C:\Program Files\Java\jdk-17\bin\server\jvm.dll
+0x00007ffa7d9f0000 - 0x00007ffa7d9f8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffa59430000 - 0x00007ffa5943a000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa7e990000 - 0x00007ffa7ea04000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffa746b0000 - 0x00007ffa746e6000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa7abc0000 - 0x00007ffa7abda000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffa58d60000 - 0x00007ffa58d6a000 	C:\Program Files\Java\jdk-17\bin\jimage.dll
+0x00007ffa796d0000 - 0x00007ffa79911000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffa7e330000 - 0x00007ffa7e6b2000 	C:\WINDOWS\System32\combase.dll
+0x00007ffa7e7f0000 - 0x00007ffa7e8c6000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffa60000000 - 0x00007ffa60039000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffa7c250000 - 0x00007ffa7c2e9000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffa59070000 - 0x00007ffa59095000 	C:\Program Files\Java\jdk-17\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.3323_none_3e088096e3344490;C:\Program Files\Java\jdk-17\bin\server
+
+VM Arguments:
+jvm_args: -ea -Dallure.results.directory=C:\Users\AFROZ\git\capstone\JpetStore/target/allure-results -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: org.testng.remote.RemoteTestNG -serport 7858 -protocol json -d C:\Users\AFROZ\git\capstone\JpetStore\test-output C:\Users\AFROZ\git\capstone\JpetStore\xml\cart.xml
+java_class_path (initial): C:\Users\AFROZ\eclipse\jee-2024-093\eclipse\configuration\org.eclipse.osgi\1010\0\.cp\lib\testng-remote.jar;C:\Users\AFROZ\git\capstone\JpetStore\target\test-classes;C:\Users\AFROZ\git\capstone\JpetStore\target\classes;C:\Users\AFROZ\.p2\pool\plugins\org.junit_4.13.2.v20230809-1000.jar;C:\Users\AFROZ\.p2\pool\plugins\org.hamcrest_3.0.0.jar;C:\Users\AFROZ\.p2\pool\plugins\org.hamcrest.core_2.2.0.v20230809-1000.jar;C:\Users\AFROZ\.m2\repository\io\qameta\allure\allure-testng\2.24.0\allure-testng-2.24.0.jar;C:\Users\AFROZ\.m2\repository\io\qameta\allure\allure-java-commons\2.24.0\allure-java-commons-2.24.0.jar;C:\Users\AFROZ\.m2\repository\io\qameta\allure\allure-model\2.24.0\allure-model-2.24.0.jar;C:\Users\AFROZ\.m2\repository\io\qameta\allure\allure-test-filter\2.24.0\allure-test-filter-2.24.0.jar;C:\Users\AFROZ\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\AFROZ\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\AFROZ\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\AFROZ\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\AFROZ\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\AFROZ\.m2\repository\org\seleniumhq\selenium\selenium-java\4.30.0\selenium-java-4.30.0.jar;C:\Users\AFROZ\.m2\repository\org\seleniumhq\selenium\selenium-api\4.30.0\selenium-api-4.30.0.jar;C:\Users\AFROZ\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\AFROZ\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.30.0\selenium-chrome-driver-4.30.0.jar;C:\Users\AFROZ\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.30.0\selenium-chromium-driver-4.30.0.jar;C:\Users\AFROZ\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.30.0\selenium-manager-4.30.0.jar;C:\Users\AFROZ\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v132\4.30.0\seleniu
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 58720256                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 918552576                                 {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 918552576                              {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-17
+PATH=C:/Program Files/Java/Oracle_JDK-22/bin/server;C:/Program Files/Java/Oracle_JDK-22/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_2\bin;C:\oracle\product\10.2.0\db_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-13.0.2\bin;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\Oracle_JDK-22\bin;C:\Users\AFROZ\OneDrive\Desktop\J2EE Softwares\apache-tomcat-10.1.28-windows-x64\apache-tomcat-10.1.28\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-17\bin;C:\Program Files\apache-maven-3.9.9\bin;C:\Program Files\Java\jdk-21\bin;C:\Users\AFROZ\Downloads\allure-2.33.0\allure-2.33.0\bin;C:\Users\AFROZ\AppData\Local\Programs\Python\Launcher\;C:\Users\AFROZ\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.1\bin;;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Users\AFROZ\AppData\Roaming\npm;C:\Users\AFROZ\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\AFROZ\Downloads\allure-2.33.0\allure-2.33.0\bin;;C:\WINDOWS\system32;
+USERNAME=AFROZ
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 26100 (10.0.26100.3323)
+OS uptime: 0 days 10:07 hours
+
+CPU: total 4 (initial active 4) (4 cores per cpu, 2 threads per core) family 23 model 24 stepping 1 microcode 0x8108109, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt
+
+Memory: 4k page, system-wide physical 3500M (304M free)
+TotalPageFile size 14252M (AvailPageFile size 4M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 48M, peak: 49M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (17.0.12+8-LTS-286) for windows-amd64 JRE (17.0.12+8-LTS-286), built on Jun  5 2024 06:46:59 by "mach5one" with MS VC++ 17.6 (VS2022)
+
+END.
